@@ -1,0 +1,202 @@
+/* Reset some default styles */
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define the animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: center center;
+    }
+    50% {
+        background-position: right center;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+/* Set basic styles for the body */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('../images/skull.gif'); /* Adjust the path if necessary */
+    background-size: cover; /* Adjusts the size to cover the entire element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-position: center; /* Centers the image */
+    color: #666; /* Default text color */
+    background-color: #000000;
+}
+
+/* Header styles */
+header {
+    color: #faf5f5; /* Default text color */
+    padding: 10px 0;
+    position: relative; /* Ensure the line is positioned correctly */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth transitions for color and font size */
+}
+
+header:hover {
+    color: #ffffff; /* Brighter white text color on hover */
+    font-size: 1.1em; /* Slightly larger text on hover */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the header */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background: #f8f7f734; /* Line color */
+}
+
+header .container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #f7f4f4;
+    text-decoration: none;
+    padding: 5px 0; /* Adds space around the text */
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; /* Centers the nav horizontally */
+    width: 100%;
+    padding: 10px 0; /* Add padding if needed */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    border-bottom: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+    text-decoration: none;
+    border-bottom: none;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+
+/* Main content specific styles */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+
+.main-content p {
+    font-size: 16px;
+    color: #fcf9f9;
+}
+
+.paragraph {
+    width: 60%; /* Adjust as needed */
+    margin: 5px;
+    padding: 0px; /* Adjust as needed */
+    border-radius: 8px;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-top: 8%;
+
+    
+}
+.paragraph h1 {
+    font-size: 24px;
+    color: #f7f2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Style for the container holding the images */
+.image-container {
+    width: 500px; /* Set the width to the same for both images */
+    height: auto; /* Ensure height adjusts automatically */
+}
+
+.base-image {
+    display: block;
+    width: 100%; /* Ensures the base image covers the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    flex-direction: row; /* Align logos vertically */
+    gap: 10px; /* Space between logos */
+    position: fixed;
+    top: 70%; /* Center vertically */
+    left: 150px; /* Adjust as needed */
+    transform: translateY(-50%); /* Center vertically relative to its own height */
+}
+
+.logo-container .logo {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-container .logo:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+}
